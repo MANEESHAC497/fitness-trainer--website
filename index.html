@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitConnect | Fitness Trainer Booking</title>
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<header class="header">
+<nav class="navbar">
+<h2 class="logo">FitConnect 💪</h2>
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#trainers">Trainers</a></li>
+<li><a href="#workouts">Workouts</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><button class="btn btn-primary" onclick="openModal()">Book Session</button></li>
+</ul>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Transform Your Body With Expert Trainers</h1>
+<p>Get personalized one-on-one training sessions and achieve your fitness goals.</p>
+<div class="cta-buttons">
+<a href="#trainers" class="btn btn-primary">Find Your Trainer</a>
+<a href="#workouts" class="btn btn-secondary">View Plans</a>
+</div>
+</div>
+</section>
+
+<section class="trainers" id="trainers">
+<h2>Meet Our Certified Trainers</h2>
+<p class="section-desc">Train with professionals and achieve your goals.</p>
+<div class="trainer-grid">
+
+<div class="trainer-card">
+<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Fitness trainer Alex">
+<div class="trainer-info">
+<span class="badge">Online Available</span>
+<h3>Alex Johnson</h3>
+<p class="specialty">Strength Training</p>
+<p class="rating">⭐ 4.8/5</p>
+<button class="btn btn-primary book-btn" onclick="openModal('Alex Johnson')">View Schedule</button>
+</div>
+</div>
+
+<div class="trainer-card">
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=600&q=80" alt="Fitness trainer Sarah">
+<div class="trainer-info">
+<span class="badge">Online Available</span>
+<h3>Sarah Williams</h3>
+<p class="specialty">Yoga & Flexibility</p>
+<p class="rating">⭐ 4.9/5</p>
+<button class="btn btn-primary book-btn" onclick="openModal('Sarah Williams')">View Schedule</button>
+</div>
+</div>
+
+<div class="trainer-card">
+<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Fitness trainer David">
+<div class="trainer-info">
+<span class="badge">Online Available</span>
+<h3>David Miller</h3>
+<p class="specialty">Weight Loss</p>
+<p class="rating">⭐ 4.7/5</p>
+<button class="btn btn-primary book-btn" onclick="openModal('David Miller')">View Schedule</button>
+</div>
+</div>
+
+<div class="trainer-card">
+<img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=600&q=80" alt="Fitness trainer Emma">
+<div class="trainer-info">
+<span class="badge">Online Available</span>
+<h3>Emma Wilson</h3>
+<p class="specialty">Cardio Fitness</p>
+<p class="rating">⭐ 4.6/5</p>
+<button class="btn btn-primary book-btn" onclick="openModal('Emma Wilson')">View Schedule</button>
+</div>
+</div>
+
+<div class="trainer-card">
+<img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80" alt="Fitness trainer Ryan">
+<div class="trainer-info">
+<span class="badge">Online Available</span>
+<h3>Ryan Smith</h3>
+<p class="specialty">Muscle Building</p>
+<p class="rating">⭐ 4.8/5</p>
+<button class="btn btn-primary book-btn" onclick="openModal('Ryan Smith')">View Schedule</button>
+</div>
+</div>
+
+<div class="trainer-card">
+<img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=600&q=80" alt="Fitness trainer Mia">
+<div class="trainer-info">
+<span class="badge">Online Available</span>
+<h3>Mia Davis</h3>
+<p class="specialty">Personal Fitness</p>
+<p class="rating">⭐ 4.9/5</p>
+<button class="btn btn-primary book-btn" onclick="openModal('Mia Davis')">View Schedule</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="workouts" id="workouts">
+<h2>Popular Workout Plans</h2>
+<p class="section-desc">Choose the right plan for your fitness level.</p>
+<div class="filter-buttons">
+<button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="beginner">Beginner</button>
+<button class="filter-btn" data-filter="advanced">Advanced</button>
+</div>
+
+<div class="workout-plans">
+<div class="workout-card beginner">
+<h3>🌱 Beginner Fitness</h3>
+<p>Start your fitness journey with easy exercises and guided training.</p>
+<p>Duration: 4 Weeks</p>
+</div>
+<div class="workout-card beginner">
+<h3>🧘 Yoga & Wellness</h3>
+<p>Improve flexibility, balance and relaxation through yoga.</p>
+<p>Duration: 3 Weeks</p>
+</div>
+<div class="workout-card advanced">
+<h3>🔥 Strength & Power</h3>
+<p>Build strength, muscle and endurance with advanced workouts.</p>
+<p>Duration: 8 Weeks</p>
+</div>
+<div class="workout-card advanced">
+<h3>🏃 Advanced Cardio</h3>
+<p>Boost stamina and improve cardiovascular fitness.</p>
+<p>Duration: 6 Weeks</p>
+</div>
+</div>
+</section>
+
+<section class="pricing" id="pricing">
+<h2>Our Training Plans</h2>
+<div class="price-grid">
+<div class="price-card">
+<h3>Basic</h3>
+<h2>₹499</h2>
+<p>2 Training Sessions</p>
+<p>Beginner Workout Plan</p>
+<button class="btn btn-primary" onclick="openModal()">Book Now</button>
+</div>
+<div class="price-card featured">
+<h3>Premium</h3>
+<h2>₹999</h2>
+<p>5 Training Sessions</p>
+<p>Personalized Workout Plan</p>
+<button class="btn btn-primary" onclick="openModal()">Book Now</button>
+</div>
+<div class="price-card">
+<h3>Pro</h3>
+<h2>₹1499</h2>
+<p>10 Training Sessions</p>
+<p>Advanced Training Support</p>
+<button class="btn btn-primary" onclick="openModal()">Book Now</button>
+</div>
+</div>
+</section>
+
+<div class="modal" id="booking-modal">
+<div class="modal-content">
+<span class="close-modal" onclick="closeModal()">&times;</span>
+<h2>Book Your Session</h2>
+<form id="booking-form">
+<label>Your Name</label>
+<input type="text" id="customer-name" placeholder="Enter your name" required>
+
+<label>Email Address</label>
+<input type="email" id="customer-email" placeholder="Enter email" required>
+
+<label>Select Trainer</label>
+<select id="trainer-name" required>
+<option value="">Choose Trainer</option>
+<option>Alex Johnson</option>
+<option>Sarah Williams</option>
+<option>David Miller</option>
+<option>Emma Wilson</option>
+<option>Ryan Smith</option>
+<option>Mia Davis</option>
+</select>
+
+<label>Select Date</label>
+<input type="date" id="session-date" required>
+
+<label>Available Times</label>
+<div class="time-slots">
+<button type="button" class="time-btn">9:00 AM</button>
+<button type="button" class="time-btn">10:30 AM</button>
+<button type="button" class="time-btn">1:00 PM</button>
+<button type="button" class="time-btn">4:00 PM</button>
+<button type="button" class="time-btn">5:30 PM</button>
+</div>
+<input type="hidden" id="selected-time" required>
+
+<button type="submit" class="btn btn-primary confirm-btn">Confirm Booking</button>
+</form>
+</div>
+</div>
+
+<footer class="footer">
+<h2>FitConnect 💪</h2>
+<p>Your fitness journey starts here.</p>
+<p>© 2026 FitConnect. All Rights Reserved.</p>
+</footer>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>
+
